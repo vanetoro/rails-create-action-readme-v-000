@@ -16,6 +16,7 @@ class PostsController < ApplicationController
 	  post.title = params[:title]
 	  post.description = params[:description]
 	  post.save
+		redirect_to posts_path(@post)
 	end
 	# @post = Post.new(title: 'My Post', description: 'Small description')
 	# @post.save
