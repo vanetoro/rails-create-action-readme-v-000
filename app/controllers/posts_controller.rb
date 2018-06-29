@@ -11,5 +11,12 @@ class PostsController < ApplicationController
 		@post = Post.new
 	end
 
-	Post.new(title: 'My Post', description: 'Small description')
+	def create
+  post = Post.new
+  post.title = params[:title]
+  post.description = params[:description]
+  post.save
+end
+	# @post = Post.new(title: 'My Post', description: 'Small description')
+	# @post.save
 end
