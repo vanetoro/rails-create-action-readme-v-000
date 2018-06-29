@@ -10,4 +10,6 @@ class PostsController < ApplicationController
 	def new
 		@post = Post.new
 	end
+
+	Post.new(title: 'My Post', description: 'Small description')
 end
